@@ -1,14 +1,7 @@
 
-import { Fragment, useMemo } from "react"
+function Header({cart, removeFromCart, increaseQuantity, decrementQuantity, clearCart, isEmpty, cartTotal}){
 
 
-function Header({cart, removeFromCart, increaseQuantity, decrementQuantity, clearCart}){
-
-    //State derivado
-    const isEmpty = useMemo(() => cart.length === 0, [cart])
-    const cartTotal = useMemo(() => cart.reduce((total, item) => total + (item.quantity * item.price),0), [cart])
-
-    
 
     return(
 
